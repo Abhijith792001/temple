@@ -508,26 +508,31 @@
 
 
     <!-- Temple Photo Gallery Section (Clean Editorial Mosaic Layout) -->
-    <section id="gallery" class="relative py-16 sm:py-24 bg-[#FAF7F2] scroll-mt-24 overflow-hidden">
+    <section id="gallery" class="relative py-16 sm:py-24 bg-gradient-to-b from-[#FAF7F2] via-[#FBF5E9]/60 to-white scroll-mt-24 overflow-hidden">
         
         <!-- Subtle Top Background Transition -->
         <div class="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-[#F1F5F9]/30 to-transparent pointer-events-none"></div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Section Header (Clean App Typography & High Contrast) -->
+            <!-- Section Header (Premium Editorial Style: Dark Navy Heading, Maroon Eyebrow, Gold/Maroon Accent Line) -->
             <div class="mb-12 sm:mb-16 text-center max-w-3xl mx-auto">
-                <span class="text-xs font-bold uppercase tracking-widest text-theme-maroon block mb-2.5 font-sans">
-                    <span class="en">Architectural Heritage</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-theme-maroon block mb-2 font-sans">
+                    <span class="en">Architectural Splendor</span>
                     <span class="ml">ക്ഷേത്ര ദൃശ്യങ്ങൾ</span>
                 </span>
 
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-cinzel font-bold text-slate-900 tracking-tight leading-tight">
-                    <span class="en">Temple Photo <span class="text-theme-maroon font-serif italic">Gallery</span></span>
-                    <span class="ml block text-2xl sm:text-3xl mt-1 text-theme-maroon font-bold font-sans">ഫോട്ടോ ഗാലറി</span>
+                    <span class="en">Temple Photo Gallery</span>
+                    <span class="ml block text-2xl sm:text-3xl mt-1 text-slate-900 font-bold font-sans">ഫോട്ടോ ഗാലറി</span>
                 </h2>
 
-                <div class="mx-auto my-4 w-16 h-0.5 bg-theme-maroon/80 rounded-full"></div>
+                <!-- Maroon & Antique Gold Accent Line -->
+                <div class="flex items-center justify-center gap-1.5 my-4">
+                    <span class="h-0.5 w-10 bg-theme-maroon rounded-full"></span>
+                    <span class="h-1 w-3 bg-amber-500 rounded-full"></span>
+                    <span class="h-0.5 w-10 bg-theme-maroon rounded-full"></span>
+                </div>
 
                 <p class="text-slate-700 text-sm sm:text-base font-medium leading-relaxed">
                     <span class="en">Explore the sacred grandeur, ancient stone carvings, and tranquil vistas of Lord Padmanabha’s abode. Click any photo for full-screen view.</span>
@@ -535,16 +540,16 @@
                 </p>
             </div>
 
-            <!-- Asymmetric Gallery Mosaic Grid Layout (Borderless, Real Photo Focus, Dark Overlay Text) -->
+            <!-- Asymmetric Gallery Mosaic Grid Layout (Local Image Assets Only) -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
                 
                 <!-- Left Column: Large Featured Landscape Image (Span 7) -->
                 <div class="lg:col-span-7">
-                    <div onclick="openLightbox('https://www.jp-india.org/uploads/program/headpic/finding-dravida-in-kerala-tracing-the-plot-in-kerala%E2%80%99s-temple-architecture-474.JPG', 'Dravidian Kerala Temple Architecture')" 
+                    <div onclick="openLightbox('assets/images/gallery-gopuram.jpg', 'Dravidian Kerala Temple Architecture')" 
                          class="group relative h-80 sm:h-96 lg:h-[510px] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg cursor-pointer bg-slate-950">
                         
                         <!-- Real Temple Photo -->
-                        <img src="https://www.jp-india.org/uploads/program/headpic/finding-dravida-in-kerala-tracing-the-plot-in-kerala%E2%80%99s-temple-architecture-474.JPG" 
+                        <img src="assets/images/gallery-gopuram.jpg" 
                              alt="Dravidian Kerala Temple Architecture" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-95 group-hover:opacity-100">
                         
@@ -573,11 +578,11 @@
                 <!-- Right Column: 3 Supporting Grid Images (Span 5) -->
                 <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
                     
-                    <!-- Item 2: Top Wide Image (Pillar Carvings - KEPT) -->
-                    <div onclick="openLightbox('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop', 'Pillar Carvings - Kulasekhara Mandapam Sculptures')" 
+                    <!-- Item 2: Top Wide Image (Pillar Carvings) -->
+                    <div onclick="openLightbox('assets/images/gallery-carvings.jpg', 'Pillar Carvings - Kulasekhara Mandapam Sculptures')" 
                          class="group relative h-60 lg:h-[242px] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-md cursor-pointer bg-slate-950">
                         
-                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800&auto=format&fit=crop" 
+                        <img src="assets/images/gallery-carvings.jpg" 
                              alt="Stone Pillar Carvings" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-95 group-hover:opacity-100">
                         
@@ -603,21 +608,21 @@
                     <!-- Bottom Sub-Grid for Items 3 & 4 (Side by Side) -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:h-[242px]">
                         
-                        <!-- Item 3: Shree Padmanabhaswamy Sanctum View -->
-                        <div onclick="openLightbox('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJWeJ1KqDeG70D4wNJeAKMwIn6fuPUWntlQiEf0lrpQ&s=10', 'Shree Padmanabhaswamy Temple Vistas')" 
+                        <!-- Item 3: Padma Theertham View -->
+                        <div onclick="openLightbox('assets/images/gallery-lake.jpg', 'Padma Theertham Tank - Sacred Temple Pond')" 
                              class="group relative h-56 lg:h-full w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-md cursor-pointer bg-slate-950">
                             
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJWeJ1KqDeG70D4wNJeAKMwIn6fuPUWntlQiEf0lrpQ&s=10" 
-                                 alt="Shree Padmanabhaswamy Temple Vistas" 
+                            <img src="assets/images/gallery-lake.jpg" 
+                                 alt="Padma Theertham Tank" 
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-95 group-hover:opacity-100">
                             
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/30 to-transparent p-4 flex flex-col justify-end">
                                 <div class="space-y-0.5">
                                     <span class="text-amber-300 text-[10px] font-bold uppercase tracking-wider block font-sans">
-                                        Sacred Vistas
+                                        Sacred Tank
                                     </span>
                                     <h3 class="font-cinzel font-bold text-white text-base drop-shadow-sm">
-                                        Temple Sanctum
+                                        Padma Theertham
                                     </h3>
                                 </div>
                             </div>
@@ -627,11 +632,11 @@
                             </div>
                         </div>
 
-                        <!-- Item 4: Sacred Kerala Heritage Temple -->
-                        <div onclick="openLightbox('https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fmobile%2Fthirumandhamkunnu-temple-1724653257_c46d8b5e7019a4a29c3e.webp&w=1080&q=75', 'Sacred Kerala Temple Architecture')" 
+                        <!-- Item 4: Sacred Kerala Heritage Temple Shrines -->
+                        <div onclick="openLightbox('assets/images/gallery-aarti.jpg', 'Sacred Kerala Temple Architecture')" 
                              class="group relative h-56 lg:h-full w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-md cursor-pointer bg-slate-950">
                             
-                            <img src="https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fmobile%2Fthirumandhamkunnu-temple-1724653257_c46d8b5e7019a4a29c3e.webp&w=1080&q=75" 
+                            <img src="assets/images/gallery-aarti.jpg" 
                                  alt="Sacred Kerala Temple Architecture" 
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-95 group-hover:opacity-100">
                             
@@ -657,9 +662,9 @@
 
             </div>
 
-            <!-- View Full Gallery Button (Border-free pill) -->
+            <!-- View Full Gallery Button -->
             <div class="mt-12 text-center">
-                <button onclick="openLightbox('https://www.jp-india.org/uploads/program/headpic/finding-dravida-in-kerala-tracing-the-plot-in-kerala%E2%80%99s-temple-architecture-474.JPG', 'Dravidian Kerala Temple Architecture')" 
+                <button onclick="openLightbox('assets/images/gallery-gopuram.jpg', 'Dravidian Kerala Temple Architecture')" 
                         class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white bg-theme-maroon hover:bg-theme-maroon-dark transition px-8 py-3.5 rounded-full shadow-md hover:shadow-lg">
                     <span class="en">View All Photos</span>
                     <span class="ml">എല്ലാ ചിത്രങ്ങളും കാണുക</span>
@@ -681,7 +686,7 @@
         </div>
     </div>
 
-    <!-- Major Festivals Section (Cinematic Kerala Heritage Theme) -->
+    <!-- Living Traditions & Festivals Section -->
     <section id="festivals" class="relative py-16 sm:py-24 bg-[#FAF7F2] scroll-mt-24 border-b border-amber-900/10 overflow-hidden">
         
         <!-- Subtle Top Background Transition -->
@@ -689,19 +694,24 @@
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Section Header -->
+            <!-- Section Header (Premium Editorial Style: Dark Navy Heading, Maroon Eyebrow, Gold/Maroon Accent Line) -->
             <div class="mb-12 sm:mb-16 text-center max-w-3xl mx-auto">
-                <span class="text-xs font-bold uppercase tracking-widest text-theme-maroon block mb-2.5 font-sans">
+                <span class="text-xs font-bold uppercase tracking-widest text-theme-maroon block mb-2 font-sans">
                     <span class="en">Sacred Traditions</span>
                     <span class="ml">ആഘോഷങ്ങളും പാരമ്പര്യവും</span>
                 </span>
 
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-cinzel font-bold text-slate-900 tracking-tight leading-tight">
-                    <span class="en">Major <span class="text-theme-maroon font-serif italic">Festivals</span></span>
-                    <span class="ml block text-2xl sm:text-3xl mt-1 text-theme-maroon font-bold font-sans">പ്രധാന ഉത്സവങ്ങൾ</span>
+                    <span class="en">Major Festivals</span>
+                    <span class="ml block text-2xl sm:text-3xl mt-1 text-slate-900 font-bold font-sans">പ്രധാന ഉത്സവങ്ങൾ</span>
                 </h2>
 
-                <div class="mx-auto my-4 w-16 h-0.5 bg-theme-maroon/80 rounded-full"></div>
+                <!-- Maroon & Antique Gold Accent Line -->
+                <div class="flex items-center justify-center gap-1.5 my-4">
+                    <span class="h-0.5 w-10 bg-theme-maroon rounded-full"></span>
+                    <span class="h-1 w-3 bg-amber-500 rounded-full"></span>
+                    <span class="h-0.5 w-10 bg-theme-maroon rounded-full"></span>
+                </div>
 
                 <p class="text-slate-700 text-sm sm:text-base font-medium leading-relaxed">
                     <span class="en">Witness the divine grandeur, centuries-old rituals, and radiant illuminations celebrated at Lord Padmanabha’s sacred abode.</span>
@@ -834,41 +844,146 @@
         </div>
     </section>
 
-    <!-- Devotee Amenities Section with Lucide Icons -->
-    <section id="facilities" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-theme-text mb-2 flex items-center justify-center gap-2">
-                <i data-lucide="building-2" class="w-7 h-7 text-theme-maroon"></i>
-                <span class="en">Devotee Amenities</span>
-                <span class="ml">ഭക്തർക്കുള്ള സൗകര്യങ്ങൾ</span>
-            </h2>
-        </div>
+    <!-- Devotee Amenities Section (Clean Premium Grid Layout) -->
+    <section id="facilities" class="relative py-16 sm:py-24 bg-[#FAF7F2] scroll-mt-24 border-b border-amber-900/10 overflow-hidden">
+        
+        <!-- Subtle Top Background Transition -->
+        <div class="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-[#FAF7F2]/40 to-transparent pointer-events-none"></div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
-                <i data-lucide="utensils" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
-                <h4 class="font-bold text-xs text-slate-900">Free Prasadam</h4>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header (Premium Editorial Style: Dark Navy Heading, Maroon Eyebrow, Gold/Maroon Accent Line) -->
+            <div class="mb-12 sm:mb-16 text-center max-w-3xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-widest text-theme-maroon block mb-2 font-sans">
+                    <span class="en">Pilgrim Services</span>
+                    <span class="ml">തീർത്ഥാടക സൗകര്യങ്ങൾ</span>
+                </span>
+
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-cinzel font-bold text-slate-900 tracking-tight leading-tight">
+                    <span class="en">Devotee Amenities</span>
+                    <span class="ml block text-2xl sm:text-3xl mt-1 text-slate-900 font-bold font-sans">ഭക്തർക്കുള്ള സൗകര്യങ്ങൾ</span>
+                </h2>
+
+                <!-- Maroon & Antique Gold Accent Line -->
+                <div class="flex items-center justify-center gap-1.5 my-4">
+                    <span class="h-0.5 w-10 bg-theme-maroon rounded-full"></span>
+                    <span class="h-1 w-3 bg-amber-500 rounded-full"></span>
+                    <span class="h-0.5 w-10 bg-theme-maroon rounded-full"></span>
+                </div>
+
+                <p class="text-slate-700 text-sm sm:text-base font-medium leading-relaxed">
+                    <span class="en">Comprehensive facilities for a peaceful, comfortable, and sacred pilgrimage experience.</span>
+                    <span class="ml">ക്ഷേത്രദർശനത്തിനെത്തുന്ന ഭക്തർക്കായി സജ്ജീകരിച്ചിട്ടുള്ള വിവിധ സൗകര്യങ്ങൾ.</span>
+                </p>
             </div>
-            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
-                <i data-lucide="package" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
-                <h4 class="font-bold text-xs text-slate-900">Cloakroom</h4>
+
+            <!-- Amenities Grid Layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Facility 1: Free Prasadam -->
+                <div class="group bg-white p-6 rounded-2xl sm:rounded-3xl border border-amber-900/10 shadow-md hover:shadow-xl transition-all duration-300 flex items-start gap-4 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100/80 text-theme-maroon flex items-center justify-center font-bold shadow-xs shrink-0 group-hover:bg-theme-maroon group-hover:text-amber-300 transition-colors">
+                        <i data-lucide="utensils" class="w-6 h-6"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-cinzel font-bold text-slate-900 text-lg group-hover:text-theme-maroon transition-colors">
+                            <span class="en">Free Prasadam</span>
+                            <span class="ml font-sans font-bold text-base">സൗജന്യ പ്രസാദം</span>
+                        </h3>
+                        <p class="text-slate-600 text-xs sm:text-sm font-normal leading-relaxed">
+                            <span class="en">Traditional temple prasadam served to all visiting devotees daily.</span>
+                            <span class="ml">ക്ഷേത്രദർശനത്തിനെത്തുന്ന ഭക്തർക്കായി സജ്ജീകരിച്ച പ്രസാദ വിതരണം.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Facility 2: Cloakroom -->
+                <div class="group bg-white p-6 rounded-2xl sm:rounded-3xl border border-amber-900/10 shadow-md hover:shadow-xl transition-all duration-300 flex items-start gap-4 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100/80 text-theme-maroon flex items-center justify-center font-bold shadow-xs shrink-0 group-hover:bg-theme-maroon group-hover:text-amber-300 transition-colors">
+                        <i data-lucide="package" class="w-6 h-6"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-cinzel font-bold text-slate-900 text-lg group-hover:text-theme-maroon transition-colors">
+                            <span class="en">Cloakroom &amp; Storage</span>
+                            <span class="ml font-sans font-bold text-base">ക്ലോക്ക് റൂം</span>
+                        </h3>
+                        <p class="text-slate-600 text-xs sm:text-sm font-normal leading-relaxed">
+                            <span class="en">Secure counter for footwear, bags, and mobile phone storage.</span>
+                            <span class="ml">ചെരുപ്പുകളും വ്യക്തിഗത വസ്തുക്കളും സൂക്ഷിക്കാനുള്ള സുരക്ഷിത കൗണ്ടർ.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Facility 3: Wheelchair Access -->
+                <div class="group bg-white p-6 rounded-2xl sm:rounded-3xl border border-amber-900/10 shadow-md hover:shadow-xl transition-all duration-300 flex items-start gap-4 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100/80 text-theme-maroon flex items-center justify-center font-bold shadow-xs shrink-0 group-hover:bg-theme-maroon group-hover:text-amber-300 transition-colors">
+                        <i data-lucide="accessibility" class="w-6 h-6"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-cinzel font-bold text-slate-900 text-lg group-hover:text-theme-maroon transition-colors">
+                            <span class="en">Wheelchair Assistance</span>
+                            <span class="ml font-sans font-bold text-base">വീൽചെയർ സൗകര്യം</span>
+                        </h3>
+                        <p class="text-slate-600 text-xs sm:text-sm font-normal leading-relaxed">
+                            <span class="en">Dedicated ramp access and wheelchair facilities for elderly pilgrims.</span>
+                            <span class="ml">മുതിർന്ന പൗരന്മാർക്കും ഭിന്നശേഷിക്കാർക്കുമുള്ള പ്രത്യേക സൗകര്യം.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Facility 4: Spiritual Books -->
+                <div class="group bg-white p-6 rounded-2xl sm:rounded-3xl border border-amber-900/10 shadow-md hover:shadow-xl transition-all duration-300 flex items-start gap-4 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100/80 text-theme-maroon flex items-center justify-center font-bold shadow-xs shrink-0 group-hover:bg-theme-maroon group-hover:text-amber-300 transition-colors">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-cinzel font-bold text-slate-900 text-lg group-hover:text-theme-maroon transition-colors">
+                            <span class="en">Spiritual Literature</span>
+                            <span class="ml font-sans font-bold text-base">ആത്മീയ പുസ്തകശാല</span>
+                        </h3>
+                        <p class="text-slate-600 text-xs sm:text-sm font-normal leading-relaxed">
+                            <span class="en">Temple history books, stothras &amp; spiritual publications counter.</span>
+                            <span class="ml">ക്ഷേത്ര ചരിത്രവും ആത്മീയ ഗ്രന്ഥങ്ങളും ലഭ്യമാകുന്ന കൗണ്ടർ.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Facility 5: Annadanam -->
+                <div class="group bg-white p-6 rounded-2xl sm:rounded-3xl border border-amber-900/10 shadow-md hover:shadow-xl transition-all duration-300 flex items-start gap-4 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100/80 text-theme-maroon flex items-center justify-center font-bold shadow-xs shrink-0 group-hover:bg-theme-maroon group-hover:text-amber-300 transition-colors">
+                        <i data-lucide="soup" class="w-6 h-6"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-cinzel font-bold text-slate-900 text-lg group-hover:text-theme-maroon transition-colors">
+                            <span class="en">Annadanam Facility</span>
+                            <span class="ml font-sans font-bold text-base">അന്നദാനം</span>
+                        </h3>
+                        <p class="text-slate-600 text-xs sm:text-sm font-normal leading-relaxed">
+                            <span class="en">Sacred meals served daily to thousands of visiting pilgrims.</span>
+                            <span class="ml">ദിവസേന ആയിരക്കണക്കിന് ഭക്തർക്ക് നൽകുന്ന അന്നദാന സൗകര്യം.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Facility 6: Pooja Counter -->
+                <div class="group bg-white p-6 rounded-2xl sm:rounded-3xl border border-amber-900/10 shadow-md hover:shadow-xl transition-all duration-300 flex items-start gap-4 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100/80 text-theme-maroon flex items-center justify-center font-bold shadow-xs shrink-0 group-hover:bg-theme-maroon group-hover:text-amber-300 transition-colors">
+                        <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-cinzel font-bold text-slate-900 text-lg group-hover:text-theme-maroon transition-colors">
+                            <span class="en">Pooja &amp; Services</span>
+                            <span class="ml font-sans font-bold text-base">പൂജ കൗണ്ടർ</span>
+                        </h3>
+                        <p class="text-slate-600 text-xs sm:text-sm font-normal leading-relaxed">
+                            <span class="en">Information &amp; receipt counter for special vazhipadu poojas.</span>
+                            <span class="ml">പ്രത്യേക വഴിപാടുകൾക്കും പൂജകൾക്കും ഉള്ള വിവര ലഭ്യതയും കൗണ്ടറും.</span>
+                        </p>
+                    </div>
+                </div>
+
             </div>
-            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
-                <i data-lucide="accessibility" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
-                <h4 class="font-bold text-xs text-slate-900">Wheelchair Access</h4>
-            </div>
-            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
-                <i data-lucide="book-open" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
-                <h4 class="font-bold text-xs text-slate-900">Spiritual Books</h4>
-            </div>
-            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
-                <i data-lucide="soup" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
-                <h4 class="font-bold text-xs text-slate-900">Annadanam</h4>
-            </div>
-            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
-                <i data-lucide="heart-handshake" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
-                <h4 class="font-bold text-xs text-slate-900">Pooja Counter</h4>
-            </div>
+
         </div>
     </section>
 
