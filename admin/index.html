@@ -74,13 +74,6 @@
                         <span>Dashboard Overview</span>
                     </button>
 
-                    <button id="nav-tab-bookings" onclick="switchAdminTab('tab-bookings')" 
-                            class="admin-nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl text-stone-600 hover:bg-stone-100 transition">
-                        <i class="fa-solid fa-calendar-check w-5 text-stone-500"></i>
-                        <span>Pooja Bookings</span>
-                        <span class="ml-auto bg-amber-800 text-white text-xs px-2 py-0.5 rounded-full">14</span>
-                    </button>
-
                     <button id="nav-tab-timings" onclick="switchAdminTab('tab-timings')" 
                             class="admin-nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl text-stone-600 hover:bg-stone-100 transition">
                         <i class="fa-solid fa-clock w-5 text-stone-500"></i>
@@ -125,11 +118,11 @@
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                 <div>
                     <h1 class="text-2xl font-bold text-slate-900">Temple Admin Portal</h1>
-                    <p class="text-xs text-slate-500 mt-0.5">Manage daily darshan slots, special pooja bookings, and announcements.</p>
+                    <p class="text-xs text-slate-500 mt-0.5">Manage daily darshan slots, photo gallery, and devotee messages.</p>
                 </div>
                 <div class="flex items-center gap-3">
                     <button onclick="openAddModal()" class="px-4 py-2.5 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-semibold text-xs shadow-sm flex items-center gap-2 transition">
-                        <i class="fa-solid fa-plus text-xs"></i> New Timing / Pooja Slot
+                        <i class="fa-solid fa-plus text-xs"></i> New Timing Announcement
                     </button>
                 </div>
             </div>
@@ -137,7 +130,7 @@
             <!-- TAB 1: OVERVIEW -->
             <div id="tab-overview" class="admin-tab-content space-y-8">
                 <!-- Stats Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                     <div class="p-5 rounded-2xl bg-white border border-admin-border shadow-sm">
                         <div class="flex justify-between items-center mb-3">
                             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Today's Visitors</span>
@@ -151,20 +144,11 @@
 
                     <div class="p-5 rounded-2xl bg-white border border-admin-border shadow-sm">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Pooja Bookings</span>
-                            <span class="p-2 rounded-lg bg-blue-50 text-blue-800"><i class="fa-solid fa-hand-holding-heart text-sm"></i></span>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Gallery Images</span>
+                            <span class="p-2 rounded-lg bg-purple-50 text-purple-800"><i class="fa-solid fa-images text-sm"></i></span>
                         </div>
-                        <div class="text-2xl font-bold text-slate-900">148</div>
-                        <span class="text-xs text-slate-500 font-medium block mt-1">24 pending confirmation</span>
-                    </div>
-
-                    <div class="p-5 rounded-2xl bg-white border border-admin-border shadow-sm">
-                        <div class="flex justify-between items-center mb-3">
-                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Special Archana</span>
-                            <span class="p-2 rounded-lg bg-purple-50 text-purple-800"><i class="fa-solid fa-om text-sm"></i></span>
-                        </div>
-                        <div class="text-2xl font-bold text-slate-900">86</div>
-                        <span class="text-xs text-emerald-600 font-medium block mt-1">Full quota reserved</span>
+                        <div class="text-2xl font-bold text-slate-900">24</div>
+                        <span class="text-xs text-emerald-600 font-medium block mt-1">High resolution album</span>
                     </div>
 
                     <div class="p-5 rounded-2xl bg-white border border-admin-border shadow-sm">
@@ -174,109 +158,6 @@
                         </div>
                         <div class="text-2xl font-bold text-emerald-600">Active</div>
                         <span class="text-xs text-slate-500 font-medium block mt-1">Live status online</span>
-                    </div>
-                </div>
-
-                <!-- Recent Pooja Requests Table -->
-                <div class="bg-white rounded-2xl border border-admin-border shadow-sm p-6">
-                    <div class="flex items-center justify-between mb-6">
-                        <div>
-                            <h3 class="font-bold text-slate-900 text-lg">Recent Devotee Pooja Bookings</h3>
-                            <p class="text-xs text-slate-500">Live feed of incoming pooja booking requests.</p>
-                        </div>
-                        <button onclick="switchAdminTab('tab-bookings')" class="text-xs font-semibold text-amber-800 hover:underline">
-                            View All Bookings &rarr;
-                        </button>
-                    </div>
-
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left text-xs sm:text-sm">
-                            <thead>
-                                <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase font-semibold text-[11px]">
-                                    <th class="py-3 px-4">Booking ID</th>
-                                    <th class="py-3 px-4">Devotee Name</th>
-                                    <th class="py-3 px-4">Pooja Type</th>
-                                    <th class="py-3 px-4">Requested Date</th>
-                                    <th class="py-3 px-4">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-100 text-slate-700">
-                                <tr class="hover:bg-slate-50">
-                                    <td class="py-3 px-4 font-mono font-semibold text-amber-900">#BK-9021</td>
-                                    <td class="py-3 px-4 font-medium">Rajesh Pillai</td>
-                                    <td class="py-3 px-4">Paal Payasam Archana</td>
-                                    <td class="py-3 px-4 text-slate-500">Oct 08, 2026</td>
-                                    <td class="py-3 px-4">
-                                        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-semibold text-[11px]">Confirmed</span>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-slate-50">
-                                    <td class="py-3 px-4 font-mono font-semibold text-amber-900">#BK-9022</td>
-                                    <td class="py-3 px-4 font-medium">Anjali Nair</td>
-                                    <td class="py-3 px-4">Udayasthamana Pooja</td>
-                                    <td class="py-3 px-4 text-slate-500">Oct 10, 2026</td>
-                                    <td class="py-3 px-4">
-                                        <span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-semibold text-[11px]">Pending</span>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-slate-50">
-                                    <td class="py-3 px-4 font-mono font-semibold text-amber-900">#BK-9023</td>
-                                    <td class="py-3 px-4 font-medium">Venkatesh Iyer</td>
-                                    <td class="py-3 px-4">Maha Sudarsana Homam</td>
-                                    <td class="py-3 px-4 text-slate-500">Oct 12, 2026</td>
-                                    <td class="py-3 px-4">
-                                        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-semibold text-[11px]">Confirmed</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 2: BOOKINGS MANAGER -->
-            <div id="tab-bookings" class="admin-tab-content hidden space-y-6">
-                <div class="bg-white p-6 rounded-2xl border border-admin-border shadow-sm space-y-4">
-                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <h3 class="font-bold text-slate-900 text-lg">All Pooja Bookings</h3>
-                        <div class="relative w-full sm:w-64">
-                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
-                            <input id="search-bookings" onkeyup="filterBookings()" type="text" placeholder="Search devotee or booking ID..." 
-                                   class="w-full pl-9 pr-4 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:border-amber-800">
-                        </div>
-                    </div>
-
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left text-xs sm:text-sm">
-                            <thead>
-                                <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase font-semibold text-[11px]">
-                                    <th class="py-3 px-4">ID</th>
-                                    <th class="py-3 px-4">Devotee</th>
-                                    <th class="py-3 px-4">Pooja</th>
-                                    <th class="py-3 px-4">Date</th>
-                                    <th class="py-3 px-4">Contact</th>
-                                    <th class="py-3 px-4">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody id="bookings-table-body" class="divide-y divide-slate-100">
-                                <tr>
-                                    <td class="py-3 px-4 font-mono font-bold text-amber-900">#BK-9021</td>
-                                    <td class="py-3 px-4 font-medium">Rajesh Pillai</td>
-                                    <td class="py-3 px-4">Paal Payasam Archana</td>
-                                    <td class="py-3 px-4">08-10-2026</td>
-                                    <td class="py-3 px-4 font-mono">+91 98470 12345</td>
-                                    <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-semibold">Confirmed</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-4 font-mono font-bold text-amber-900">#BK-9022</td>
-                                    <td class="py-3 px-4 font-medium">Anjali Nair</td>
-                                    <td class="py-3 px-4">Udayasthamana Pooja</td>
-                                    <td class="py-3 px-4">10-10-2026</td>
-                                    <td class="py-3 px-4 font-mono">+91 98951 54321</td>
-                                    <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-semibold">Pending</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
