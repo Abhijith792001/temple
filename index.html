@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Padmanabhaswamy Temple | Official Information Portal</title>
+    
+    <!-- Standard Clean Fonts: Plus Jakarta Sans & Noto Sans Malayalam -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        theme: {
+                            maroon: '#7A1C1C',
+                            'maroon-dark': '#521010',
+                            gold: '#B8860B',
+                            'gold-light': '#D4AF37',
+                            bg: '#F8FAFC',
+                            card: '#FFFFFF',
+                            border: '#E2E8F0',
+                            text: '#0F172A',
+                            muted: '#64748B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Noto Sans Malayalam', 'sans-serif'],
+                        ml: ['Noto Sans Malayalam', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .ml, .block-ml { display: none !important; }
+        .en { display: inline-block; }
+        .block-en { display: block; }
+
+        html.lang-ml .en, html.lang-ml .block-en { display: none !important; }
+        html.lang-ml .ml { display: inline-block !important; }
+        html.lang-ml .block-ml { display: block !important; }
+    </style>
+</head>
+<body class="bg-theme-bg text-theme-text font-sans antialiased selection:bg-amber-100 selection:text-theme-maroon">
+
+    <!-- Top Announcement Bar (Matching Admin Portal Theme) -->
+    <div class="bg-theme-maroon text-amber-100 text-xs sm:text-sm py-2.5 px-4 font-medium border-b border-amber-900/40">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2 truncate">
+                <span class="px-2 py-0.5 rounded bg-amber-400/20 text-amber-300 text-[11px] font-bold uppercase tracking-wider shrink-0">Live Status</span>
+                <span class="truncate">
+                    <span class="en">Temple Open Today • Nirmalya Darshan 03:30 AM – Deeparadhana 07:20 PM</span>
+                    <span class="ml">ക്ഷേത്രം ഇന്ന് തുറന്നിരിക്കുന്നു • നിർമാല്യ ദർശനം രാവിലെ 03:30 മുതൽ</span>
+                </span>
+            </div>
+            <a href="admin/index.html" class="hidden sm:inline-flex items-center gap-1.5 bg-amber-900/60 hover:bg-amber-900 text-amber-200 px-3 py-1 rounded text-xs font-semibold shrink-0 transition">
+                <i data-lucide="lock" class="w-3.5 h-3.5"></i> Admin Portal
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header (Clean Layout) -->
+    <header class="bg-white sticky top-0 z-40 border-b border-theme-border shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand with Lucide Landmark Icon -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-theme-maroon text-amber-300 flex items-center justify-center font-bold shadow-sm">
+                        <i data-lucide="landmark" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-base sm:text-lg text-theme-text block leading-snug">
+                            <span class="en">Shree Padmanabhaswamy Temple</span>
+                            <span class="ml">ശ്രീ പത്മനാഭസ്വാമി ക്ഷേത്രം</span>
+                        </span>
+                        <span class="text-xs text-theme-muted font-medium block">
+                            <span class="en">Thiruvananthapuram, Kerala</span>
+                            <span class="ml">തിരുവനന്തപുരം, കേരളം</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
+                    <a href="#history" class="hover:text-theme-maroon transition py-1"><span class="en">History</span><span class="ml">ചരിത്രം</span></a>
+                    <a href="#timings" class="hover:text-theme-maroon transition py-1"><span class="en">Timings</span><span class="ml">സമയം</span></a>
+                    <a href="#gallery" class="hover:text-theme-maroon transition py-1"><span class="en">Gallery</span><span class="ml">ഗാലറി</span></a>
+                    <a href="#festivals" class="hover:text-theme-maroon transition py-1"><span class="en">Festivals</span><span class="ml">ഉത്സവങ്ങൾ</span></a>
+                    <a href="#facilities" class="hover:text-theme-maroon transition py-1"><span class="en">Amenities</span><span class="ml">സൗകര്യങ്ങൾ</span></a>
+                    <a href="#contact" class="hover:text-theme-maroon transition py-1"><span class="en">Contact</span><span class="ml">ബന്ധപ്പെടുക</span></a>
+                </nav>
+
+                <!-- Language Switcher & Controls -->
+                <div class="flex items-center gap-3">
+                    <div class="bg-slate-100 p-1 rounded-xl border border-slate-200 flex items-center">
+                        <button id="btn-en" onclick="setLang('en')" class="px-3 py-1 text-xs font-bold rounded-lg bg-theme-maroon text-white shadow-sm transition">
+                            EN
+                        </button>
+                        <button id="btn-ml" onclick="setLang('ml')" class="px-3 py-1 text-xs font-bold rounded-lg text-slate-700 hover:bg-slate-200 transition">
+                            മലയാളം
+                        </button>
+                    </div>
+
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-xl border border-slate-200">
+                        <i id="mobile-menu-icon" class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-theme-border px-4 py-4 space-y-2 font-medium text-sm text-slate-700">
+            <a href="#history" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-slate-50"><span class="en">History & Heritage</span><span class="ml">ചരിത്രവും പൈതൃകവും</span></a>
+            <a href="#timings" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-slate-50"><span class="en">Darshan Timings</span><span class="ml">ദർശന സമയം</span></a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-slate-50"><span class="en">Photo Gallery</span><span class="ml">ഫോട്ടോ ഗാലറി</span></a>
+            <a href="#festivals" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-slate-50"><span class="en">Festivals</span><span class="ml">ഉത്സവങ്ങൾ</span></a>
+            <a href="#facilities" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-slate-50"><span class="en">Devotee Amenities</span><span class="ml">സൗകര്യങ്ങൾ</span></a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-slate-50"><span class="en">Contact & Location</span><span class="ml">വിലാസവും ഡ്രസ്സ് കോഡും</span></a>
+            <a href="admin/index.html" class="block px-3 py-2.5 rounded-lg bg-theme-maroon text-white font-semibold text-center mt-2">
+                <i data-lucide="lock" class="w-3.5 h-3.5 inline-block mr-1"></i> Admin Portal
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Full Background Image using assets/images/temple.png) -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-slate-900 border-b border-theme-border text-white">
+        <!-- Temple Background Image (16:9 Kerala Temple Heritage Image) -->
+        <div class="absolute inset-0 bg-cover bg-center sm:bg-[position:center_right] bg-no-repeat" 
+             style="background-image: url('assets/images/temple.png');">
+        </div>
+        
+        <!-- Refined Gradient Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-slate-950/20"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+            <div class="max-w-3xl space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                    <span class="en">Sacred Abode of Lord Vishnu • Ananta Shayanam</span>
+                    <span class="ml">മഹാവിഷ്ണുവിന്റെ തിരുനട</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+                    <span class="en">Shree Padmanabhaswamy Temple</span>
+                    <span class="ml">ശ്രീ പത്മനാഭസ്വാമി ക്ഷേത്രം</span>
+                </h1>
+
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-normal max-w-2xl">
+                    <span class="en">
+                        A sacred destination of divine tranquility, architectural magnificence, and royal Travancore heritage located in Thiruvananthapuram.
+                    </span>
+                    <span class="ml">
+                        ആത്മീയ ശാന്തിയുടെയും അപൂർവ്വ വാസ്തുവിദ്യയുടെയും അനന്ത ഭക്തിയുടെയും പുണ്യസങ്കേതം.
+                    </span>
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#timings" class="px-7 py-3.5 rounded-xl bg-theme-maroon hover:bg-theme-maroon-dark text-white font-bold text-xs uppercase tracking-wider shadow-lg transition flex items-center gap-2 border border-amber-500/30">
+                        <i data-lucide="clock" class="w-4 h-4"></i>
+                        <span class="en">View Darshan Schedule</span>
+                        <span class="ml">ദർശന സമയം</span>
+                    </a>
+                    <a href="#history" class="px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider border border-white/20 backdrop-blur-md transition">
+                        <span class="en">Explore Heritage</span>
+                        <span class="ml">ചരിത്രം</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Metric Strip -->
+    <section class="border-b border-theme-border bg-slate-100/70 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="p-3">
+                <span class="font-extrabold text-2xl text-theme-maroon block">1000+ Years</span>
+                <span class="text-xs text-slate-500 font-medium">Ancient History</span>
+            </div>
+            <div class="p-3 border-l border-slate-200">
+                <span class="font-extrabold text-2xl text-theme-maroon block">Adishesha</span>
+                <span class="text-xs text-slate-500 font-medium">Ananta Shayanam Deity</span>
+            </div>
+            <div class="p-3 md:border-l border-slate-200">
+                <span class="font-extrabold text-2xl text-theme-maroon block">3 Doors</span>
+                <span class="text-xs text-slate-500 font-medium">Thirumukham Darshan</span>
+            </div>
+            <div class="p-3 border-l border-slate-200">
+                <span class="font-extrabold text-2xl text-theme-maroon block">Padma Theertham</span>
+                <span class="text-xs text-slate-500 font-medium">Sacred Lake</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- History & Divine Heritage Section (Kerala Temple Heritage Aesthetic) -->
+<section id="history"
+    class="relative isolate overflow-hidden scroll-mt-24
+           bg-[#FBF5E9] py-16 sm:py-20 lg:py-24">
+
+    <!-- Background Image -->
+    <div class="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
+         style="background-image: url('assets/images/history_background.png');">
+    </div>
+
+    <!-- Theme Overlay -->
+    <!-- <div class="absolute inset-0 -z-10 pointer-events-none
+                bg-gradient-to-r from-[#FFF9ED]/90 via-[#FFF8EB]/75
+                to-[#FFF4DF]/80"></div> -->
+
+    <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+
+        <div class="grid grid-cols-1 items-center gap-12
+                    lg:grid-cols-12 lg:gap-10 xl:gap-12">
+
+            <!-- LEFT COLUMN: History Content -->
+            <div class="relative z-10 lg:col-span-5">
+
+                <div class="mb-6 inline-flex items-center gap-2 rounded-full
+                            border border-amber-400/60 bg-[#FFF4D5]/90
+                            px-4 py-2 text-xs font-bold uppercase
+                            tracking-[0.16em] text-amber-900">
+
+                    <i data-lucide="sparkles"
+                       class="h-4 w-4 text-amber-700"></i>
+
+                    <span class="en">History &amp; Heritage</span>
+                    <span class="ml">ചരിത്രവും പൈതൃകവും</span>
+                </div>
+
+                <h2 class="text-4xl font-extrabold leading-[1.12]
+                           tracking-tight text-slate-900
+                           sm:text-5xl xl:text-[3.5rem]">
+
+                    <span class="en">
+                        A Legacy of
+                        <span class="mt-1 block font-serif italic text-theme-maroon">
+                            Healing &amp; Divine Protection
+                        </span>
+                    </span>
+
+                    <span class="ml mt-3 block text-2xl font-bold
+                                 leading-snug text-theme-maroon sm:text-3xl">
+                        ആത്മീയ ശാന്തിയുടെയും പൈതൃകത്തിന്റെയും തിരുസങ്കേതം
+                    </span>
+                </h2>
+
+                <div class="my-6 flex items-center gap-2">
+                    <span class="h-1 w-12 rounded-full bg-theme-maroon"></span>
+                    <span class="h-1 w-7 rounded-full bg-amber-500"></span>
+                    <span class="h-1 w-3 rounded-full bg-amber-300"></span>
+                </div>
+
+                <p class="max-w-xl text-sm font-medium leading-7
+                          text-slate-700 sm:text-base sm:leading-8">
+
+                    <span class="en">
+                        For generations, the temple has been a sacred centre
+                        where divine healing, protection and spiritual guidance
+                        continue to bless devotees across the world.
+                    </span>
+
+                    <span class="ml">
+                        ആയിരത്തിലധികം വർഷങ്ങളുടെ ആത്മീയ പൈതൃകവും ദ്രാവിഡ -
+                        കേരള വാസ്തുവിദ്യയും തിരുവിതാംകൂർ രാജവംശത്തിന്റെ
+                        ഭക്തിയും സമന്വയിക്കുന്ന പുണ്യസങ്കേതം.
+                    </span>
+                </p>
+
+                <!-- CTA -->
+                <div class="mt-8">
+                    <a href="#timings"
+                       class="group inline-flex items-center gap-3 rounded-xl
+                              border border-amber-500/50 bg-theme-maroon
+                              px-6 py-4 text-xs font-bold uppercase
+                              tracking-wider text-amber-50 shadow-lg
+                              shadow-red-950/10 transition-all duration-300
+                              hover:-translate-y-1 hover:bg-theme-maroon-dark
+                              hover:shadow-xl sm:px-7">
+
+                        <span class="en">Explore Our History</span>
+                        <span class="ml">ചരിത്രം കൂടുതൽ അറിയുക</span>
+
+                        <i data-lucide="arrow-right"
+                           class="h-4 w-4 transition-transform
+                                  group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Deity Illustrations -->
+            <div class="relative mx-auto w-full max-w-2xl lg:col-span-7">
+
+                <!-- Ambient Glow -->
+                <div class="pointer-events-none absolute left-1/2 top-1/2
+                            h-72 w-72 -translate-x-1/2 -translate-y-1/2
+                            rounded-full bg-amber-200/30 blur-3xl
+                            sm:h-96 sm:w-96"></div>
+
+                <!-- Decorative Connecting Line -->
+                <svg class="pointer-events-none absolute inset-0
+                            hidden h-full w-full lg:block"
+                     viewBox="0 0 640 650"
+                     fill="none"
+                     preserveAspectRatio="xMidYMid meet"
+                     aria-hidden="true">
+
+                    <path d="M115 80 C360 80 440 180 400 280
+                             S250 410 140 555"
+                          stroke="#C58A32"
+                          stroke-width="1.5"
+                          stroke-opacity=".65"/>
+
+                    <path d="M150 80 C360 110 430 200 390 280"
+                          stroke="#DDA84D"
+                          stroke-width="1"
+                          stroke-opacity=".35"/>
+
+                    <circle cx="310" cy="145" r="5" fill="#B87927"/>
+                    <circle cx="400" cy="280" r="5" fill="#C58A32"/>
+                    <circle cx="260" cy="425" r="5" fill="#B87927"/>
+                </svg>
+
+                <div class="relative flex flex-col gap-7
+                            sm:gap-9 lg:min-h-[650px] lg:gap-0">
+
+                    <!-- DEITY 01 -->
+                    <article class="group relative flex items-center gap-5
+                                    rounded-2xl border border-amber-800/10
+                                    bg-[#FFFBF3]/70 p-4 shadow-sm
+                                    transition-all duration-300
+                                    hover:-translate-y-1 hover:shadow-lg
+                                    sm:gap-7 sm:p-5
+                                    lg:absolute lg:left-[2%] lg:top-0
+                                    lg:w-[88%] lg:rounded-none
+                                    lg:border-0 lg:bg-transparent
+                                    lg:p-0 lg:shadow-none">
+
+                        <div class="relative z-10 flex h-28 w-28 shrink-0
+                                    items-center justify-center rounded-full
+                                    border border-amber-400/80
+                                    bg-gradient-to-br from-[#FFFDF7]
+                                    via-[#FFF0CD] to-[#F7DDA7]
+                                    shadow-[0_8px_28px_rgba(153,101,34,0.16)]
+                                    transition-transform duration-300
+                                    group-hover:scale-105
+                                    sm:h-36 sm:w-36
+                                    lg:h-44 lg:w-44">
+
+                            <div class="absolute inset-2 rounded-full
+                                        border border-amber-500/40 sm:inset-3"></div>
+
+                            <img src="assets/images/god_dhanwanthari.png"
+                                 alt="Lord Dhanwanthari"
+                                 loading="lazy"
+                                 class="relative z-10 h-[88%] w-[88%]
+                                        object-contain"/>
+                        </div>
+
+                        <div class="min-w-0 flex-1 py-2">
+                            <div class="mb-2 flex items-center gap-3">
+                                <span class="font-serif text-sm
+                                             tracking-[0.2em] text-amber-800">01</span>
+                                <span class="h-px w-10 bg-amber-500/80"></span>
+                            </div>
+
+                            <h3 class="font-serif text-xl font-bold
+                                       leading-tight text-theme-maroon sm:text-2xl">
+                                <span class="en">Lord Dhanwanthari</span>
+                                <span class="ml">ധന്വന്തരി മൂർത്തി</span>
+                            </h3>
+
+                            <p class="mt-2 max-w-sm text-sm leading-6 text-slate-700">
+                                <span class="en">
+                                    The divine healer, worshipped for health,
+                                    well-being and the removal of ailments.
+                                </span>
+                                <span class="ml">
+                                    ആരോഗ്യത്തിനും രോഗശമനത്തിനുമായി ഭക്തർ ആരാധിക്കുന്ന മൂർത്തി.
+                                </span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- DEITY 02 -->
+                    <article class="group relative flex items-center gap-5
+                                    rounded-2xl border border-amber-800/10
+                                    bg-[#FFFBF3]/70 p-4 shadow-sm
+                                    transition-all duration-300
+                                    hover:-translate-y-1 hover:shadow-lg
+                                    sm:gap-7 sm:p-5
+                                    lg:absolute lg:left-[13%] lg:top-[34%]
+                                    lg:w-[85%] lg:rounded-none
+                                    lg:border-0 lg:bg-transparent
+                                    lg:p-0 lg:shadow-none">
+
+                        <div class="relative z-10 flex h-28 w-28 shrink-0
+                                    items-center justify-center rounded-full
+                                    border border-amber-400/80
+                                    bg-gradient-to-br from-[#FFFDF7]
+                                    via-[#FFF0CD] to-[#F7DDA7]
+                                    shadow-[0_8px_28px_rgba(153,101,34,0.16)]
+                                    transition-transform duration-300
+                                    group-hover:scale-105
+                                    sm:h-36 sm:w-36
+                                    lg:h-44 lg:w-44">
+
+                            <div class="absolute inset-2 rounded-full
+                                        border border-amber-500/40 sm:inset-3"></div>
+
+                            <img src="assets/images/god_narasimha.png"
+                                 alt="Lord Narasimha"
+                                 loading="lazy"
+                                 class="relative z-10 h-[88%] w-[88%]
+                                        object-contain"/>
+                        </div>
+
+                        <div class="min-w-0 flex-1 py-2">
+                            <div class="mb-2 flex items-center gap-3">
+                                <span class="font-serif text-sm
+                                             tracking-[0.2em] text-amber-800">02</span>
+                                <span class="h-px w-10 bg-amber-500/80"></span>
+                            </div>
+
+                            <h3 class="font-serif text-xl font-bold
+                                       leading-tight text-theme-maroon sm:text-2xl">
+                                <span class="en">Lord Narasimha</span>
+                                <span class="ml">നരസിംഹ മൂർത്തി</span>
+                            </h3>
+
+                            <p class="mt-2 max-w-sm text-sm leading-6 text-slate-700">
+                                <span class="en">
+                                    The divine protector, revered for strength,
+                                    courage and the removal of fear and negativity.
+                                </span>
+                                <span class="ml">
+                                    ഭയവും പ്രതിസന്ധികളും അകറ്റി ശക്തിയും സംരക്ഷണവും നൽകുന്ന മൂർത്തി.
+                                </span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- DEITY 03 -->
+                    <article class="group relative flex items-center gap-5
+                                    rounded-2xl border border-amber-800/10
+                                    bg-[#FFFBF3]/70 p-4 shadow-sm
+                                    transition-all duration-300
+                                    hover:-translate-y-1 hover:shadow-lg
+                                    sm:gap-7 sm:p-5
+                                    lg:absolute lg:left-[2%] lg:top-[68%]
+                                    lg:w-[92%] lg:rounded-none
+                                    lg:border-0 lg:bg-transparent
+                                    lg:p-0 lg:shadow-none">
+
+                        <div class="relative z-10 flex h-28 w-28 shrink-0
+                                    items-center justify-center rounded-full
+                                    border border-amber-400/80
+                                    bg-gradient-to-br from-[#FFFDF7]
+                                    via-[#FFF0CD] to-[#F7DDA7]
+                                    shadow-[0_8px_28px_rgba(153,101,34,0.16)]
+                                    transition-transform duration-300
+                                    group-hover:scale-105
+                                    sm:h-36 sm:w-36
+                                    lg:h-44 lg:w-44">
+
+                            <div class="absolute inset-2 rounded-full
+                                        border border-amber-500/40 sm:inset-3"></div>
+
+                            <img src="assets/images/god_ganapathi_ayyappa.png"
+                                 alt="Lord Ganapathi and Lord Ayyappa"
+                                 loading="lazy"
+                                 class="relative z-10 h-[88%] w-[88%]
+                                        object-contain"/>
+                        </div>
+
+                        <div class="min-w-0 flex-1 py-2">
+                            <div class="mb-2 flex items-center gap-3">
+                                <span class="font-serif text-sm
+                                             tracking-[0.2em] text-amber-800">03</span>
+                                <span class="h-px w-10 bg-amber-500/80"></span>
+                            </div>
+
+                            <h3 class="font-serif text-xl font-bold
+                                       leading-tight text-theme-maroon sm:text-2xl">
+                                <span class="en">
+                                    Lord Ganapathi &amp; Lord Ayyappa
+                                </span>
+                                <span class="ml">ഗണപതിയും അയ്യപ്പനും</span>
+                            </h3>
+
+                            <p class="mt-2 max-w-sm text-sm leading-6 text-slate-700">
+                                <span class="en">
+                                    Guiding deities who remove obstacles and bless
+                                    devotees on the path of devotion and discipline.
+                                </span>
+                                <span class="ml">
+                                    വിഘ്നങ്ങൾ അകറ്റി ഭക്തിയുടെയും അച്ചടക്കത്തിന്റെയും
+                                    പാതയിൽ അനുഗ്രഹിക്കുന്ന പ്രതിഷ്ഠകൾ.
+                                </span>
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Smooth Bottom Gradient Fade into Timings Section -->
+    <div class="absolute inset-x-0 bottom-0 h-16 sm:h-24 lg:h-32 pointer-events-none -z-10 bg-gradient-to-b from-transparent via-[#FBF5E9]/50 to-[#F1F5F9]"></div>
+</section>
+
+
+    <!-- Darshan Timings & Pooja Schedule (Matching Admin Dashboard Card Layout) -->
+    <section id="timings" class="py-16 bg-slate-100/60 border-b border-theme-border scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-theme-text mb-2 flex items-center justify-center gap-2">
+                    <i data-lucide="clock" class="w-7 h-7 text-theme-maroon"></i>
+                    <span class="en">Darshan Timings &amp; Poojas</span>
+                    <span class="ml">ദർശന സമയവും പൂജകളും</span>
+                </h2>
+                <p class="text-slate-500 text-sm sm:text-base">
+                    <span class="en">Daily opening hours and scheduled ritual offerings.</span>
+                    <span class="ml">ദൈനംദിന ദർശന സമയവും പൂജകളും.</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Opening Hours Card -->
+                <div class="lg:col-span-5 bg-white p-6 rounded-2xl border border-theme-border shadow-sm space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                        <h3 class="font-bold text-slate-900 text-lg flex items-center gap-2">
+                            <i data-lucide="door-open" class="w-5 h-5 text-theme-maroon"></i>
+                            <span class="en">Darshan Slots</span><span class="ml">ദർശന സമയം</span>
+                        </h3>
+                        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">Open</span>
+                    </div>
+
+                    <div class="space-y-3 text-xs sm:text-sm">
+                        <div class="flex justify-between items-center p-3 rounded-xl bg-amber-50/60 border border-amber-200">
+                            <span class="font-bold text-slate-900">Nirmalya Darshan</span>
+                            <span class="font-mono text-theme-maroon font-bold">03:30 AM – 04:45 AM</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <span class="font-medium text-slate-700">Morning Slot I</span>
+                            <span class="font-mono text-slate-800 font-semibold">06:30 AM – 07:00 AM</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <span class="font-medium text-slate-700">Morning Slot II</span>
+                            <span class="font-mono text-slate-800 font-semibold">08:30 AM – 10:00 AM</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <span class="font-medium text-slate-700">Midday Slot</span>
+                            <span class="font-mono text-slate-800 font-semibold">10:30 AM – 11:10 AM</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded-xl bg-amber-50/60 border border-amber-200">
+                            <span class="font-bold text-slate-900">Evening Deeparadhana</span>
+                            <span class="font-mono text-theme-maroon font-bold">06:45 PM – 07:20 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Poojas Table Card (Matching Admin Table Style) -->
+                <div class="lg:col-span-7 bg-white p-6 rounded-2xl border border-theme-border shadow-sm space-y-4">
+                    <h3 class="font-bold text-slate-900 text-lg flex items-center gap-2 border-b border-slate-100 pb-3">
+                        <i data-lucide="hand-heart" class="w-5 h-5 text-theme-maroon"></i>
+                        <span class="en">Daily Rituals Schedule</span><span class="ml">ദൈനംദിന പൂജകൾ</span>
+                    </h3>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs sm:text-sm">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase font-bold text-[11px]">
+                                    <th class="py-3 px-4">Pooja Ritual</th>
+                                    <th class="py-3 px-4">Time</th>
+                                    <th class="py-3 px-4">Significance</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr>
+                                    <td class="py-3.5 px-4 font-bold text-slate-900">Usha Pooja</td>
+                                    <td class="py-3.5 px-4 font-mono font-bold text-theme-maroon">06:30 AM</td>
+                                    <td class="py-3.5 px-4 text-slate-600">Morning offering & chants</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3.5 px-4 font-bold text-slate-900">Ucha Pooja</td>
+                                    <td class="py-3.5 px-4 font-mono font-bold text-theme-maroon">10:30 AM</td>
+                                    <td class="py-3.5 px-4 text-slate-600">Midday principal rites</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3.5 px-4 font-bold text-slate-900">Deeparadhana</td>
+                                    <td class="py-3.5 px-4 font-mono font-bold text-theme-maroon">06:45 PM</td>
+                                    <td class="py-3.5 px-4 text-slate-600">Evening illumination worship</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3.5 px-4 font-bold text-slate-900">Athazha Pooja</td>
+                                    <td class="py-3.5 px-4 font-mono font-bold text-theme-maroon">07:30 PM</td>
+                                    <td class="py-3.5 px-4 text-slate-600">Night concluding prayer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Grid -->
+    <section id="gallery" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-theme-text mb-2 flex items-center justify-center gap-2">
+                <i data-lucide="camera" class="w-7 h-7 text-theme-maroon"></i>
+                <span class="en">Temple Photo Gallery</span>
+                <span class="ml">ഫോട്ടോ ഗാലറി</span>
+            </h2>
+            <p class="text-slate-500 text-sm">Click any photo for full-screen view.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div onclick="openLightbox('https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=1200&auto=format&fit=crop', 'Eastern Gopuram')" 
+                 class="bg-white p-2.5 rounded-2xl border border-theme-border shadow-sm hover:shadow-md cursor-pointer transition">
+                <div class="h-52 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <p class="font-bold text-center text-xs text-slate-800 mt-2.5">Eastern Gopuram</p>
+            </div>
+
+            <div onclick="openLightbox('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop', 'Stone Sculptures')" 
+                 class="bg-white p-2.5 rounded-2xl border border-theme-border shadow-sm hover:shadow-md cursor-pointer transition">
+                <div class="h-52 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <p class="font-bold text-center text-xs text-slate-800 mt-2.5">Pillar Carvings</p>
+            </div>
+
+            <div onclick="openLightbox('https://images.unsplash.com/photo-1621831336224-2c2e0b5d5d85?q=80&w=1200&auto=format&fit=crop', 'Padma Theertham Lake')" 
+                 class="bg-white p-2.5 rounded-2xl border border-theme-border shadow-sm hover:shadow-md cursor-pointer transition">
+                <div class="h-52 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1621831336224-2c2e0b5d5d85?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <p class="font-bold text-center text-xs text-slate-800 mt-2.5">Padma Theertham Tank</p>
+            </div>
+
+            <div onclick="openLightbox('https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=1200&auto=format&fit=crop', 'Evening Illumination')" 
+                 class="bg-white p-2.5 rounded-2xl border border-theme-border shadow-sm hover:shadow-md cursor-pointer transition">
+                <div class="h-52 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <p class="font-bold text-center text-xs text-slate-800 mt-2.5">Evening Illumination</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl font-bold hover:text-amber-300">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center space-y-3">
+            <img id="lightbox-img" src="" class="max-h-[80vh] mx-auto rounded-xl border-4 border-white shadow-2xl">
+            <p id="lightbox-caption" class="font-bold text-white text-sm"></p>
+        </div>
+    </div>
+
+    <!-- Festivals Section -->
+    <section id="festivals" class="py-16 bg-slate-100/60 border-y border-theme-border scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-theme-text mb-2 flex items-center justify-center gap-2">
+                    <i data-lucide="sparkles" class="w-7 h-7 text-theme-maroon"></i>
+                    <span class="en">Major Festivals</span>
+                    <span class="ml">പ്രധാന ഉത്സവങ്ങൾ</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-theme-border shadow-sm space-y-3">
+                    <span class="px-3 py-1 rounded-full bg-amber-100 text-theme-maroon font-bold text-xs">Oct – Nov</span>
+                    <h3 class="font-bold text-lg text-slate-900">Alpasi Festival</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        10-day bi-annual festival featuring traditional music and Arattu at Shanghumugham beach.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-theme-border shadow-sm space-y-3">
+                    <span class="px-3 py-1 rounded-full bg-amber-100 text-theme-maroon font-bold text-xs">Mar – Apr</span>
+                    <h3 class="font-bold text-lg text-slate-900">Painkuni Festival</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Features traditional Pandava fiberglass figures placed at the Eastern Gate.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-theme-border shadow-sm space-y-3">
+                    <span class="px-3 py-1 rounded-full bg-amber-100 text-theme-maroon font-bold text-xs">Every 6 Years</span>
+                    <h3 class="font-bold text-lg text-slate-900">Laksha Deepam</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Illumination of 100,000 traditional oil lamps across the entire temple grounds.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Devotee Amenities Section with Lucide Icons -->
+    <section id="facilities" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-theme-text mb-2 flex items-center justify-center gap-2">
+                <i data-lucide="building-2" class="w-7 h-7 text-theme-maroon"></i>
+                <span class="en">Devotee Amenities</span>
+                <span class="ml">ഭക്തർക്കുള്ള സൗകര്യങ്ങൾ</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
+                <i data-lucide="utensils" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
+                <h4 class="font-bold text-xs text-slate-900">Free Prasadam</h4>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
+                <i data-lucide="package" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
+                <h4 class="font-bold text-xs text-slate-900">Cloakroom</h4>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
+                <i data-lucide="accessibility" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
+                <h4 class="font-bold text-xs text-slate-900">Wheelchair Access</h4>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
+                <i data-lucide="book-open" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
+                <h4 class="font-bold text-xs text-slate-900">Spiritual Books</h4>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
+                <i data-lucide="soup" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
+                <h4 class="font-bold text-xs text-slate-900">Annadanam</h4>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-theme-border text-center shadow-sm">
+                <i data-lucide="heart-handshake" class="w-6 h-6 text-theme-maroon mx-auto mb-2.5"></i>
+                <h4 class="font-bold text-xs text-slate-900">Pooja Counter</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Dress Code Guidance -->
+    <section id="contact" class="py-16 bg-slate-100/60 border-t border-theme-border scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            
+            <!-- Dress Code Banner -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl border-2 border-amber-300 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center md:text-left">
+                    <span class="px-2.5 py-1 rounded bg-amber-100 text-theme-maroon text-xs font-bold">Mandatory Attire Rules</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900">Traditional Dress Code Required</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed">
+                        <strong>Men:</strong> Dhoti / Mundu (Bare chest inside inner courtyard). 
+                        <strong>Women:</strong> Saree, Set Mundu, or Traditional Half-Saree. Jeans or shirts inside sanctum are strictly prohibited.
+                    </p>
+                </div>
+                <div class="p-3.5 bg-amber-50 rounded-xl border border-amber-200 text-center shrink-0">
+                    <i data-lucide="user-check" class="w-6 h-6 text-theme-maroon mx-auto mb-1"></i>
+                    <span class="block text-xs font-bold text-slate-900">Dhoti / Saree Only</span>
+                </div>
+            </div>
+
+            <!-- Address & Map Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-theme-border shadow-sm space-y-4">
+                    <h3 class="font-bold text-xl text-slate-900">Contact Details</h3>
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+                        <p><strong>Address:</strong> Shree Padmanabhaswamy Temple, Fort Area, East Fort, Thiruvananthapuram, Kerala 695023</p>
+                        <p><strong>Phone:</strong> +91 471 245 0233</p>
+                        <p><strong>Email:</strong> info@padmanabhaswamytemple.org</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-theme-border overflow-hidden shadow-sm min-h-[220px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.8943644062145!2d76.94142477583648!3d8.483038697380962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbb6a87754f9%3A0xe54e66c6b328a6f3!2sSree%20Padmanabhaswamy%20Temple!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            class="w-full h-full min-h-[220px] border-0" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 text-center text-xs space-y-3">
+        <p class="font-bold text-sm text-white">Shree Padmanabhaswamy Temple Information Portal</p>
+        <p class="text-slate-400">© 2026 Official Portal • Thiruvananthapuram, Kerala</p>
+        <p><a href="admin/index.html" class="underline hover:text-white">Admin Dashboard</a></p>
+    </footer>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
